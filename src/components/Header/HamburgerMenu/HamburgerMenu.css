@@ -1,0 +1,143 @@
+.hamburger-menu__button {
+  width: 100%;
+  max-width: 44px;
+  height: 44px;
+  border: none;
+  display: none;
+  background-image: url(../../../images/header-burger.svg);
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hamburger-menu__button:hover {
+  opacity: .8;
+}
+
+.hamburger-menu__button_hidden {
+  display: none;
+}
+
+.hamburger-menu {
+  width: 520px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: #202020;
+  z-index: 5;
+}
+
+.hamburger-menu__active {
+  visibility: visible;
+}
+
+.hamburger-menu__close {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 22.44px;
+  top: 22.44px;
+  background-image: url(../../../images/navigation-close-icon.svg);
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hamburger-menu__close:hover {
+  opacity: .8;
+}
+
+.hamburger-menu__links {
+  margin: 0;
+  padding-top: 159px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.hamburger-menu__link {
+  padding-bottom: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hamburger-menu__link_active {
+  border-bottom: 1px white solid;
+}
+
+.hamburger-menu__footer {
+  width: 100%;
+  max-width: 100px;
+  height: 30px;
+  padding-bottom: 92px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.hamburger-menu__login {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.hamburger-menu__account {
+  width: 26px;
+  height: 30px;
+  border-radius: 4px;
+  background: #313131 url('../../../images/profile-icon.svg') no-repeat center;
+}
+
+@media screen and (max-width: 900px) {
+  .hamburger-menu__button {
+    display: block;
+    max-width: 40px;
+    height: 43px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .hamburger-menu__button {
+    display: block;
+    max-width: 40px;
+    height: 43px;
+  }
+
+  .hamburger-menu {
+    width: 100vw;
+  }
+
+  .hamburger-menu__close {
+    right: 14px;
+    top: 14px;
+  }
+
+  .hamburger-menu__footer {
+    padding-bottom: 43px;
+  }
+
+  .hamburger-menu__links {
+    padding-top: 144px;
+    gap: 24px;
+  }
+}
