@@ -49,6 +49,7 @@
 
 .register__input {
   border: none;
+  outline: none;
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
@@ -108,7 +109,6 @@
   color: #4285f4;
 }
 
-/*768 media*/
 @media screen and (max-width: 900px) {
   .register__logo {
     padding-top: 233px;
@@ -123,7 +123,6 @@
   }
 }
 
-/*320 media*/
 @media screen and (max-width: 750px) {
   .register__container {
     width: 260px;
@@ -145,7 +144,7 @@
 
   .register__save-btn {
     font-size: 12px;
-    margin: 202px 0 16px;
+    margin: 130px 0 16px;
   }
 
   .register__link {

@@ -46,6 +46,7 @@
 @media screen and (max-width: 750px) {
   .not-found__container {
     width: 300px;
+    padding-bottom: 30px;
   }
 
   .not-found__title {

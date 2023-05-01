@@ -1,15 +1,15 @@
 .about-project {
-  width: 100%;
   margin: 0 auto 0;
-  padding: 0 5%;
+  padding: 0 5.5%;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
 .about-project__section-title {
+  margin: 105px 0 0;
   padding: 0 0 23px;
-  margin: 110px 0 0;
   width: 100%;
   border-bottom: 1px solid #dadada;
   font-size: 22px;
@@ -18,12 +18,13 @@
 }
 
 .about-project__description {
-  display: flex;
   margin: 70px 0 110px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .about-project__column {
-  width: 50%;
+  width: 48%;
 }
 
 .about-project__title {
@@ -31,13 +32,13 @@
   padding: 0;
   font-size: 20px;
   font-weight: 400;
-  width: 84%;
+  letter-spacing: -0.04em;
 }
 
 .about-project__main-text {
   margin: 0;
   padding: 0;
-  width: 87%;
+  width: 100%;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -80,12 +81,12 @@
 }
 
 @media screen and (max-width: 900px) {
-  .about-project__section-title {
-    margin-top: 93px;
-  }
-
   .about-project {
     padding: 0 50px;
+  }
+
+  .about-project__section-title {
+    margin-top: 93px;
   }
 
   .about-project__title {
@@ -102,8 +103,9 @@
   }
 
   .about-project__main-text {
-    width: 90%;
-    line-height: 19px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
@@ -115,7 +117,7 @@
   }
 
   .about-project__description {
-    margin: 60px 0 4px;
+    margin: 62px 0 7px;
     flex-direction: column;
   }
 
@@ -131,6 +133,9 @@
   .about-project__title {
     margin-bottom: 14px;
     width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
   }
 
   .about-project__main-text {

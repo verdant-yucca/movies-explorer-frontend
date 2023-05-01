@@ -7,7 +7,7 @@ function SavedMovies() {
   return (
     <main className="main">
       <SearchForm />
-      <MoviesCardList cards={cardsSaved}/>
+      <MoviesCardList cards={cardsSaved} visibleButton={false}/>
     </main>
   );
 }

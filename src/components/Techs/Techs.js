@@ -6,15 +6,15 @@ function Techs() {
       <h2 className="technologies__section-title">Технологии</h2>
       <h3 className="technologies__title">7 технологий</h3>
       <p className="technologies__description">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
-      <div className="technologies__buttons">
-        <div className="technologies__button">HTML</div>
-        <div className="technologies__button">CSS</div>
-        <div className="technologies__button">JS</div>
-        <div className="technologies__button">React</div>
-        <div className="technologies__button">Git</div>
-        <div className="technologies__button">Express.js</div>
-        <div className="technologies__button">mongoDB</div>
-      </div>
+      <ul className="technologies__list">
+        <li className="technologies__item">HTML</li>
+        <li className="technologies__item">CSS</li>
+        <li className="technologies__item">JS</li>
+        <li className="technologies__item">React</li>
+        <li className="technologies__item">Git</li>
+        <li className="technologies__item">Express.js</li>
+        <li className="technologies__item">mongoDB</li>
+      </ul>
     </section>
   );
 }

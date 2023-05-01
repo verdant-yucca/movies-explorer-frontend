@@ -53,6 +53,7 @@
   margin: 7px 0 0;
   padding: 0 0 0 15px;
   border: none;
+  outline: none;
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
@@ -131,7 +132,7 @@
 
   .login__save-btn {
     font-size: 12px;
-    margin: 282px 0 16px;
+    margin: 240px 0 16px;
   }
 
   .login__link {

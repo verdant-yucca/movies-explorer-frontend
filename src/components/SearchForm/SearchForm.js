@@ -4,8 +4,11 @@ const SearchForm = () => (
   <section className="search">
     <div className="search__container">
       <form className="search__form" name="searchForm" noValidate>
-        <input className="search__input" type="text" name="filmInput" id="filmInput" required placeholder="Фильм"
-               minLength="2" maxLength="100"/>
+        <div className="search__input-box">
+          <input className="search__input" type="text" name="filmInput" id="filmInput" required
+                 minLength="2" maxLength="100"/>
+          <label className="search__input-label">Фильм</label>
+        </div>
         <button type="submit" className="search__search-btn">Найти</button>
       </form>
     </div>

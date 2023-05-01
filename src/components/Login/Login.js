@@ -7,7 +7,7 @@ function Login() {
   return (
     <section className="login">
       <div className="login__container">
-        <Link to="/" className="login__route"><img className="login__logo" src={logo} alt="Логотип"/></Link>
+        <Link to="/" className="login__route"><img className="login__logo" src={logo} alt="лого"/></Link>
         <h1 className="login__title">Рады видеть!</h1>
         <form name="formlogin" className="login__form" noValidate>
 

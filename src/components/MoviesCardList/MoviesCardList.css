@@ -38,20 +38,46 @@
   opacity: .6;
 }
 
-@media screen and (max-width: 768px) {
+.movieCardList__plug-button {
+  height: 36px;
+  width: 1px;
+}
+
+.movieCardList__plug-button_indent {
+  height: 55px;
+  width: 1px;
+}
+
+@media screen and (max-width: 900px) {
   .movieCardList__container {
+    padding: 0 0 80px;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 30px;
-    column-gap: 30px;
+    row-gap: 35px;
+    column-gap: 24px;
   }
+
   .movieCardList {
     padding: 0 30px;
-    margin: 100px auto 0;
-    width: 88%;
+    margin: 105px auto 0;
+    width: 92%;
+  }
+
+  .movieCardList__button {
+    width: 45%;
+  }
+
+  .movieCardList__plug-button {
+    height: 0;
+    width: 0;
+  }
+
+  .movieCardList__plug-button_indent {
+    height: 10px;
+    width: 1px;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 750px) {
   .movieCardList__container {
     margin: 0;
     padding-top: 40px;
@@ -59,8 +85,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 18px;
   }
+
   .movieCardList {
-    padding: 0 10px;
+    margin: 70px auto 50px;
+    padding: 0;
+    width: 94%;
+  }
+
+  .movieCardList__button {
+    width: 80%;
   }
 }
