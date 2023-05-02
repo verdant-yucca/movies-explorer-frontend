@@ -20,4 +20,4 @@
 # Адреса
 
 Ссылка на фронтенд: https://movies-cohort47.nomoredomains.monster/movies
-Ссылка на макет: https://site.ru
+Ссылка на макет: https://disk.yandex.ru/d/9-w0aEDPlJXcew
