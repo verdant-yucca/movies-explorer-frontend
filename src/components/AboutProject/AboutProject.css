@@ -1,0 +1,156 @@
+.about-project {
+  margin: 0 auto 0;
+  padding: 0 5.5%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-project__section-title {
+  margin: 105px 0 0;
+  padding: 0 0 23px;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.about-project__description {
+  margin: 70px 0 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-project__column {
+  width: 48%;
+}
+
+.about-project__title {
+  margin: 0 0 28px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.about-project__main-text {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.about-project__download {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin: 0 0 110px;
+  width: 100%;
+}
+
+.about-project__download-section {
+  display: flex;
+  flex-direction: column;
+  color: #8b8b8b;
+  text-align: center;
+}
+
+.about-project__download-text {
+  margin: 0;
+  padding: 14px 0 0 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+.about-project__download-text:first-of-type {
+  padding: 9px 0;
+}
+
+.about-project__download-text_background-green {
+  background-color: #3ddc84;
+  color: #000;
+}
+
+.about-project__download-text_background-grey {
+  background-color: #303030;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .about-project {
+    padding: 0 50px;
+  }
+
+  .about-project__section-title {
+    margin-top: 93px;
+  }
+
+  .about-project__title {
+    margin-bottom: 19px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-project__download {
+    margin: 0 0 90px;
+  }
+
+  .about-project__description {
+    margin: 70px 0 95px;
+  }
+
+  .about-project__main-text {
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-project__section-title {
+    margin-top: 70px;
+    padding-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .about-project__description {
+    margin: 62px 0 7px;
+    flex-direction: column;
+  }
+
+  .about-project__column {
+    width: 100%;
+    margin-bottom: 56px;
+  }
+
+  .about-project {
+    padding: 0 18px;
+  }
+
+  .about-project__title {
+    margin-bottom: 14px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+  }
+
+  .about-project__main-text {
+    font-size: 11px;
+    line-height: 16px;
+    width: 100%;
+  }
+
+  .about-project__download {
+    grid-template-columns: 35% 65%;
+    margin: 0 0 93px;
+  }
+
+  .about-project__download-text {
+    font-size: 11px;
+    padding: 8px 0 0 0;
+  }
+}
