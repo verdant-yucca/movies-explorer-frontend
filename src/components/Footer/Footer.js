@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <p className="footer__text">Учебный проект Яндекс.Практикум х
-        <Link className={'footer__link footer__link_grey'} to={"/movies"}> BeatFilm.</Link>
+        <Link className={'footer__link footer__link_grey'} to={"/movies"}> BeatMovie.</Link>
       </p>
       <div className="footer__container">
         <p className="footer__copy">&copy; {year}</p>
