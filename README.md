@@ -19,5 +19,6 @@
 
 # Адреса
 
-Ссылка на фронтенд: https://movies-cohort47.nomoredomains.monster/movies
-Ссылка на макет: https://disk.yandex.ru/d/9-w0aEDPlJXcew
+Ссылка на фронтенд: https://movies-cohort47.nomoredomains.monster/movies  
+Ссылка на макет: https://disk.yandex.ru/d/9-w0aEDPlJXcew  
+Ссылка на пуллреквест для проверки https://github.com/verdant-yucca/movies-explorer-frontend/pull/2
