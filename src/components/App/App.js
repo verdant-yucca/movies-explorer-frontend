@@ -52,8 +52,8 @@ function App() {
         if (!res.token) return;
         localStorage.setItem('token', res.token);
         setLoggedIn(true);
-        window.location.reload();
         navigate('/movies');
+        window.location.reload();
         setInfoMessage('Авторизация прошла успешно!');
       })
       .catch((err) => {
