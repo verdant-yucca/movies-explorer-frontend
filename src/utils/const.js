@@ -1,5 +1,5 @@
-export const serverUrl = 'http://localhost:3001';
-// export const serverUrl = 'https://api.movies-cohort47.nomoredomains.club';
+// export const serverUrl = 'http://localhost:3001';
+export const serverUrl = 'https://api.movies-cohort47.nomoredomains.club';
 export const apiMoviesUrl = 'https://api.nomoreparties.co/beatFilm-movies';
 export const jwt = `Bearer ${localStorage.getItem('token')}`;
 export const getItemFromLocalStorage = (item) => localStorage.getItem(item);
