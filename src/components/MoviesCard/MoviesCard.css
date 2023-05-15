@@ -14,6 +14,7 @@
 }
 
 .moviesCard__poster {
+  height: 200px;
   width: 100%;
 }
 
@@ -25,8 +26,10 @@
   line-height: 18px;
   color: #FFFFFF;
   text-align: left;
-  text-overflow: ellipsis;
   max-width: 226px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .moviesCard__duration {

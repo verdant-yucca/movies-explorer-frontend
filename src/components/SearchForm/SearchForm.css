@@ -43,6 +43,13 @@
   transition: all 0.4s ease;
 }
 
+.search__input-label_top{
+  top: -45%;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
 .search__input {
   width: 100%;
   height: 100%;
@@ -51,6 +58,10 @@
   padding: 0 0 0 20px;
   background-color: #202020;
   color: #fff;
+}
+
+.search__input::placeholder {
+  color: #ee3465;
 }
 
 .search__input:focus ~ .search__input-label,
@@ -76,12 +87,16 @@
   line-height: 18px;
   color: #FFFFFF;
 }
+.search__search-btn[disabled] {
+  background-color: #8b8b8b;
+  cursor: auto;
+}
 
-.search__search-btn:hover {
+.search__search-btn:hover:enabled {
   background-color: rgba(66,133,244,0.7);
 }
 
-.search__shortFilms {
+.search__shortMovies {
   display: flex;
   align-items: center;
   width: 226px;
@@ -119,7 +134,7 @@
   background: #272727;
 }
 
-.search__shortFilms-text {
+.search__shortMovies-text {
   font-size: 13px;
   line-height: 18px;
   margin: 0 30px 0 14px;
@@ -143,14 +158,14 @@
     width: 8.5%;
   }
 
-  .search__shortFilms {
+  .search__shortMovies {
     width: 205px;
     flex-direction: row-reverse;
     right: 0;
     position: absolute;
   }
 
-  .search__shortFilms-text {
+  .search__shortMovies-text {
     margin: 0 0 0 14px;
   }
 }
@@ -193,13 +208,13 @@
     margin-left: 0;
   }
 
-  .search__shortFilms {
+  .search__shortMovies {
     margin-top: 45px;
     width: 100%;
     justify-content: center;
   }
 
-  .search__shortFilms-text {
+  .search__shortMovies-text {
     font-size: 11px;
     margin: 0 15px 0 0;
   }

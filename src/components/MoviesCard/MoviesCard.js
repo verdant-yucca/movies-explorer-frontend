@@ -1,36 +1,44 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 
 import './MoviesCard.css';
-import deleteFilmButton from '../../images/deleteFilmButton.svg';
-import savedButton from '../../images/savedFilmButton.svg';
+import deleteMovieButton from '../../images/deleteMovieButton.svg';
+import savedButton from '../../images/savedMovieButton.svg';
+import {getInterfaceDuration} from "../../utils/const";
 
-const MoviesCard = ({card}) => {
+const MoviesCard = ({Movie, savedMoviesArray, onSaveMovie}) => {
   const location = useLocation();
   const [isSaved, setIsSaved] = useState(false);
+  const isPageSavedMovies = location.pathname === '/saved-movies';
 
-  function handleClick() {
-    setIsSaved(!isSaved);
-  }
+  useEffect(() => {
+    setIsSaved(savedMoviesArray.some(i => i.movieId === Movie.id));
+  }, [savedMoviesArray])
+
+  const handleClickButtonSaveMovie = () => {
+    onSaveMovie(Movie);
+  };
 
   return (
     <div className='moviesCard'>
       <div className='moviesCard__container'>
-        <h2 className='moviesCard__title'>{card.name}</h2>
-        <p className='moviesCard__duration'>{card.time}</p>
+        <h2 className='moviesCard__title'>{Movie.nameRU}</h2>
+        <p className='moviesCard__duration'>{getInterfaceDuration(Movie.duration)}</p>
       </div>
-      <img className='moviesCard__poster' src={card.image} alt='постер фильма'/>
+      <a href={Movie.trailerLink} target="blank">
+        <img className='moviesCard__poster' src={` ${isPageSavedMovies ? Movie?.image: `https://api.nomoreparties.co${Movie.image.url}`}`} alt='постер фильма'/>
+      </a>
 
-      {location.pathname === '/saved-movies' &&
-        <button type='button' aria-label='удалить фильм' className='moviesCard__button' onClick={handleClick}>
-          <img className='moviesCard__click' alt='удалить' src={deleteFilmButton}/>
+      {isPageSavedMovies &&
+        <button type='button' aria-label='удалить фильм' className='moviesCard__button' onClick={handleClickButtonSaveMovie}>
+          <img className='moviesCard__click' alt='удалить' src={deleteMovieButton}/>
         </button>
       }
 
-      {location.pathname === '/movies' &&
+      {!isPageSavedMovies &&
         <button type='button' aria-label='сохранить'
                 className={`moviesCard__button ${!isSaved ? 'moviesCard__button_save' : 'moviesCard__button_saved'}`}
-                onClick={handleClick}>
+                onClick={handleClickButtonSaveMovie}>
           {!isSaved ? "Сохранить" :
             <img className='moviesCard__add' alt='добавить' src={savedButton}/>}
         </button>

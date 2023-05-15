@@ -99,3 +99,41 @@
     width: 80%;
   }
 }
+
+
+.movieCardList__info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.movieCardList__preloader {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.movieCardList__preloader::before {
+  width: 100px;
+  height: 100px;
+  border: 4px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: preloader-anim 1s linear infinite;
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+}
+
+@keyframes preloader-anim {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.movieCardList__info-message {
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
