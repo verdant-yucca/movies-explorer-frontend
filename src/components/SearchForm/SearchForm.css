@@ -124,13 +124,13 @@
   position: absolute;
   top: 2px;
   z-index: 1;
-  left: 18px;
+  left: 2px;
   transition: all .3s ease-in;
   cursor: pointer;
 }
 
 .search__checkbox:checked  + .search__checkbox-label{
-  left: 2px;
+  left: 18px;
   background: #272727;
 }
 

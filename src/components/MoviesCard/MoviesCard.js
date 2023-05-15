@@ -12,9 +12,7 @@ const MoviesCard = ({Movie, savedMoviesArray, onSaveMovie}) => {
   const isPageSavedMovies = location.pathname === '/saved-movies';
 
   useEffect(() => {
-    if (savedMoviesArray.length) {
-      setIsSaved(savedMoviesArray.some(i => i.movieId === Movie.id));
-    }
+    setIsSaved(savedMoviesArray.some(i => i.movieId === Movie.id));
   }, [savedMoviesArray])
 
   const handleClickButtonSaveMovie = () => {

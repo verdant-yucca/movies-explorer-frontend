@@ -30,21 +30,6 @@ function SavedMovies({allSavedMoviesArray,onSaveMovie}) {
     setInfoMessage(!MoviesArrayFromStorage?.length ? 'Ничего не найдено' : '');
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('allSavedMoviesArray', JSON.stringify(allSavedMoviesArray));
-    getSavedMovies(inputSearch)
-  }, [allSavedMoviesArray])
-  useEffect(() => {
-    localStorage.setItem('savedMoviesArray', JSON.stringify(savedMoviesArray));
-  }, [savedMoviesArray])
-  useEffect(() => {
-    localStorage.setItem('keywordsSavedMovies', inputSearch);
-  }, [inputSearch])
-  useEffect(() => {
-    localStorage.setItem('isShortSavedMovies', isShortSavedMovies ? 'true' : '');
-  }, [isShortSavedMovies])
-
-
   const filterMoviesByKeywords = (movies, keywords) => movies.filter((movie) => movie.nameRU.toLowerCase().includes(keywords.toLowerCase()));
   const filterMoviesByDuration = (movies) => movies.filter((movie) => movie.duration <= shortMovieDuration);
 
@@ -72,8 +57,9 @@ function SavedMovies({allSavedMoviesArray,onSaveMovie}) {
   const getSavedMovies = (keywords) => allSavedMoviesArray && handleSetInitialMovies(allSavedMoviesArray, keywords);
 
   const onChangeFilterDuration = () => {
-    setIsShortSavedMovies(!isShortSavedMovies);
-    setSavedFiltrredMoviesArray(isShortSavedMovies ? filterMoviesByDuration(savedMoviesArray) : savedMoviesArray);
+    const isShort = !isShortSavedMovies;
+    setIsShortSavedMovies(isShort);
+    setSavedFiltrredMoviesArray(isShort ? filterMoviesByDuration(savedMoviesArray) : savedMoviesArray);
     localStorage.setItem('isShortSavedMovies', isShortSavedMovies ? 'true' : '');
     localStorage.setItem('allSavedMoviesArray', JSON.stringify(savedMoviesArray));
     localStorage.setItem('savedMoviesArray', JSON.stringify(filterMoviesByDuration(savedMoviesArray)));

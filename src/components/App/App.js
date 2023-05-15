@@ -24,6 +24,10 @@ function App() {
   const [infoMessage, setInfoMessage] = useState('');
 
   useEffect(() => {
+    setLoggedIn(localStorage.getItem('loggedIn')==='true');
+  }, []);
+
+  useEffect(() => {
     checkToken();
     if (loggedIn) {
       mainApi.getBasicInformation()
@@ -51,6 +55,7 @@ function App() {
       .then((res) => {
         if (!res.token) return;
         localStorage.setItem('token', res.token);
+        localStorage.setItem('loggedIn', 'true');
         setLoggedIn(true);
         navigate('/movies');
         window.location.reload();
